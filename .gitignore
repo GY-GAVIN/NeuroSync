@@ -1,0 +1,24 @@
+# 环境变量 (重要！永远不要上传你的 Key)
+.env
+
+# Python 虚拟环境
+venv/
+env/
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE 配置
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 项目临时文件
+logs/
+output/
