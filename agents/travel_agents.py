@@ -15,6 +15,10 @@ def _build_llm(env_key: str, default_model: str) -> LLM:
     api_key = os.getenv(f"{env_key}_API_KEY", os.getenv("OPENAI_API_KEY", ""))
     base_url = os.getenv(f"{env_key}_BASE_URL", "")
 
+    # 自定义 base_url 时，加 openai/ 前缀让 LiteLLM 走 OpenAI 兼容协议
+    if base_url and not model.startswith(("openai/", "deepseek/", "anthropic/", "ollama/")):
+        model = f"openai/{model}"
+
     kwargs = {"model": model, "api_key": api_key, "temperature": 0.7}
     if base_url:
         kwargs["base_url"] = base_url
