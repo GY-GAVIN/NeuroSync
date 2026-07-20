@@ -1,61 +1,90 @@
-# NeuroSync
-Real-time multi-agent orchestration system.
+# Stratego 弈策 ♟️
+
+**博弈论多智能体决策助手** — 让你的问题获得最严厉的博弈论剖析。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-> **Two AI minds, syncing in real-time to perform for you.**
-> 不是工具，是智能剧场。我们导演了一场两个AI之间充满人格的、可被观赏的博弈。
+> **三个 AI 博弈论专家，顺序协作，帮你分析现实困境。**  
+> 不是鸡汤，是策略。不是直觉，是均衡。
 
-## 核心哲学
+## 架构
 
-在 AI 时代，技术会民主化，代码会趋同。真正让一个作品喷薄而出的，是你为它注入的 **人格** 与 **叙事**。`NeuroSync` 不做流水线式的任务处理，它构建了一个 **思维场**，让两个被赋予不同性格的 AI 智能体，像大脑的两个半球一样同步思考、对话、辩论，最终编织出远超个体的智慧之网。
+```
+用户情境 → [博弈建模师] → 结构化模型 → [均衡分析师] → 均衡结果 → [策略顾问] → 行动建议
+```
+
+| Agent | 角色 | 职责 |
+|-------|------|------|
+| **博弈建模师** | Game Modeler | 将现实情境转化为规范的博弈论模型 |
+| **均衡分析师** | Equilibrium Analyst | 计算 Nash 均衡、占优策略、Pareto 前沿 |
+| **策略顾问** | Strategy Advisor | 基于分析给出可执行的策略建议 |
 
 ## 快速开始
 
-1.  **克隆仓库**
-    ```bash
-    git clone https://github.com/GY-GAVIN/NeuroSync.git
-    cd NeuroSync
-    ```
+1. **克隆仓库**
+   ```bash
+   git clone <repo-url>
+   cd stratego
+   ```
 
-2.  **安装依赖**
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. **安装依赖**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3.  **配置环境变量**
-    复制示例文件，并填入你的 API 密钥。
-    ```bash
-    cp .env.example .env
-    # 编辑 .env 文件，填入你的两个模型 API 及相关服务的 Key
-    ```
+3. **配置环境变量**
+   ```bash
+   cp .env.example .env
+   # 编辑 .env 文件，填入你的 API Key
+   ```
 
-4.  **运行应用**
-    ```bash
-    streamlit run app.py
-    ```
+4. **运行 CLI**
+   ```bash
+   python main.py "我的同事总是抢功劳，我该怎么办？"
+   python main.py --preset pricing
+   ```
 
-## 系统架构
-```mermaid
-graph TD
-    A[用户输入] --> B(Agent A: 灵感探索者)
-    A --> C(Agent B: 精明决策者)
-    B --> D{实时同步与辩论}
-    C --> D
-    D --> E[AI虚拟主播]
-    D --> F[生成最终报告]
-    E --> F
-    F --> G[用户得到深度决策结果]
-```
+5. **运行 Web 界面**
+   ```bash
+   streamlit run app.py
+   ```
 
-## 项目亮点
--   **双模型回环协作**：两个Agent通过"生成-批判-优化"的循环，产出单一模型无法企及的高质量结果。
--   **人格化智能体**：AI不再冷冰冰。"天马行空的探索者"与"毒舌本地专家"的对话，让思考过程充满戏剧张力。
--   **实时同步直播**：不是黑箱操作，前端界面实时展示两个AI的思维碰撞与决策过程。
--   **虚拟主播集成**：将AI的内心博弈，通过虚拟形象演出来，提供前所未有的交互体验。
+## 预设场景
 
-## 演示脚本
-在黑客松现场，我们推荐使用以下脚本进行演示：
--   **用户**："我想带女朋友去东京，预算8000，喜欢动漫和美食，但女朋友怕辣。"
--   **预期效果**：Agent A 提供大量灵感，Agent B 犀利筛选并吐槽，最终生成一份让情侣都满意的惊喜行程。
+- **职场博弈** — 办公室政治与晋升竞争
+- **定价竞争** — 商家定价策略分析
+- **谈判策略** — 薪资谈判与商务谈判
+- **情侣关系** — 协调博弈与性别战
+
+## 计算工具
+
+| 工具 | 类型 | 功能 |
+|------|------|------|
+| `build_payoff_matrix` | 验证工具 | 标准化收益矩阵格式 |
+| `identify_game_type` | 规则引擎 | 识别囚徒困境/斗鸡/猎鹿等经典博弈 |
+| `solve_pure_nash` | 算法 | 暴力搜索纯策略 Nash 均衡 |
+| `solve_mixed_nash` | 代数公式 | 求解 2×2 混合策略均衡 |
+| `check_dominance` | 算法 | 识别占优/劣策略 |
+| `pareto_analysis` | 算法 | 计算 Pareto 前沿面 |
+
+## 技术栈
+
+- **CrewAI** — 多智能体编排框架
+- **Streamlit** — 前端界面
+- **LiteLLM** — 模型路由（支持 OpenAI / DeepSeek / Ollama 等）
+- **Pydantic** — 工具输入验证
+
+## 参考理论
+
+本系统的博弈论框架参考《策略博弈》(Games of Strategy) — Avinash Dixit & Susan Skeath，涵盖：
+
+- 完全/不完全信息博弈
+- 同时/顺序行动博弈
+- 重复博弈与声誉机制
+- 行为博弈论
+- 承诺、信号与策略行动
+
+## License
+
+MIT

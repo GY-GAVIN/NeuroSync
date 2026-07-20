@@ -1,2 +1,2 @@
-# tasks 包初始化
-# 在此定义您的任务
+# tasks 包 — 博弈论分析任务
+from .game_tasks import create_modeling_task, create_analysis_task, create_advice_task
