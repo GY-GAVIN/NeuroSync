@@ -1,5 +1,5 @@
 """
-Stratego 弈策 — 三个协作任务定义
+NeuroSync — 三个协作任务定义
 
 知识注入机制：在任务创建时，将 knowledge/game_concepts.py 中的
 博弈论概念模板通过 f-string 拼入任务 description，为 Agent 提供框架指导。

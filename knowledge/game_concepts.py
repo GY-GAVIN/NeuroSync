@@ -1,5 +1,5 @@
 """
-Stratego 弈策 — 《策略博弈》(Games of Strategy, Dixit & Skeath) 知识模板
+NeuroSync — 《策略博弈》(Games of Strategy, Dixit & Skeath) 知识模板
 
 这些模板在任务创建时通过 f-string 注入到 task description 中，
 为 Agent 提供博弈论核心概念框架，而非通过 RAG 运行时检索。

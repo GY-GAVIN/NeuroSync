@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Stratego 弈策 — 博弈论多智能体决策助手
+NeuroSync — 博弈论多智能体决策助手
 =======================================
 
 让你的问题获得最严厉的博弈论剖析。
@@ -26,7 +26,7 @@ def run_analysis(
     output_file: str | None = None,
 ) -> str:
     """
-    运行 Stratego 三 Agent 协作分析流程。
+    运行 NeuroSync 三 Agent 协作分析流程。
 
     Args:
         situation: 用户描述的现实情境
@@ -37,7 +37,7 @@ def run_analysis(
     from tasks.game_tasks import create_modeling_task, create_analysis_task, create_advice_task
 
     print("=" * 60)
-    print("  Stratego 弈策 — 博弈论多智能体决策助手")
+    print("  NeuroSync — 博弈论多智能体决策助手")
     print("=" * 60)
     print(f"\n  情境: {situation[:80]}{'...' if len(situation) > 80 else ''}")
     print("=" * 60)
@@ -85,7 +85,7 @@ def run_analysis(
     out_path = output_file or f"outputs/analysis_{timestamp}.md"
     os.makedirs("outputs", exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write("# Stratego 弈策 — 博弈论分析报告\n\n")
+        f.write("# NeuroSync — 博弈论分析报告\n\n")
         f.write(f"- 分析时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"- 分析情境: {situation}\n\n")
         f.write("---\n\n")
@@ -144,7 +144,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Stratego 弈策 — 让你的问题获得最严厉的博弈论剖析"
+        description="NeuroSync — 让你的问题获得最严厉的博弈论剖析"
     )
     parser.add_argument("situation", nargs="?", default="", help="需要分析的现实情境")
     parser.add_argument(

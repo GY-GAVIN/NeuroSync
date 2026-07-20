@@ -1,5 +1,5 @@
 """
-Stratego 弈策 — 三个博弈论智能体定义
+NeuroSync — 三个博弈论智能体定义
 
 1. Game Modeler (博弈建模师)  —— 将现实情境形式化为博弈模型
 2. Equilibrium Analyst (均衡分析师) —— 求解各种均衡

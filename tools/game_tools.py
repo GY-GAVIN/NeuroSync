@@ -1,5 +1,5 @@
 """
-Stratego 弈策 — 博弈论计算工具
+NeuroSync — 博弈论计算工具
 
 提供六个核心工具（前两个为 LLM/规则辅助，后四个为纯算法）：
   - build_payoff_matrix：验证并规范化收益矩阵 JSON 格式

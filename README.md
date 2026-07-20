@@ -1,4 +1,4 @@
-# Stratego 弈策 ♟️
+# NeuroSync ♟️
 
 **博弈论多智能体决策助手** — 让你的问题获得最严厉的博弈论剖析。
 
@@ -25,7 +25,7 @@
 1. **克隆仓库**
    ```bash
    git clone <repo-url>
-   cd stratego
+   cd NeuroSync
    ```
 
 2. **安装依赖**

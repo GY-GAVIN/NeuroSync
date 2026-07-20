@@ -1,5 +1,5 @@
 """
-Stratego 弈策 — Streamlit 前端
+NeuroSync — Streamlit 前端
 深色主题 · 分步分析展示 · 博弈矩阵可视化
 """
 
@@ -18,7 +18,7 @@ load_dotenv()
 
 # ── 页面配置 ─────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Stratego 弈策",
+    page_title="NeuroSync",
     page_icon="♟️",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -296,7 +296,7 @@ with st.sidebar:
 
     st.markdown("### ℹ️ 关于")
     st.markdown("""
-    **Stratego 弈策** v0.1.0
+    **NeuroSync** v0.1.0
 
     基于 CrewAI 的三 Agent 博弈论分析系统。
     参考《策略博弈》(Dixit & Skeath) 理论框架。
@@ -316,7 +316,7 @@ col_logo, col_title = st.columns([0.08, 1])
 with col_logo:
     st.markdown("<h1 style='font-size:2rem;'>♟️</h1>", unsafe_allow_html=True)
 with col_title:
-    st.markdown("<h1 style='margin-bottom:0;'>Stratego 弈策</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='margin-bottom:0;'>NeuroSync</h1>", unsafe_allow_html=True)
     st.markdown(
         "<p style='color:#585B70;margin-top:-8px;'>"
         "博弈论多智能体决策助手 · 用博弈的视角看世界</p>",
@@ -426,7 +426,7 @@ if st.session_state.analysis_result:
     col_export1, col_export2 = st.columns([1, 5])
     with col_export1:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_filename = f"stratego_report_{timestamp}.md"
+        report_filename = f"neurosync_report_{timestamp}.md"
         st.download_button(
             label="📥 导出完整报告",
             data=result_text,
@@ -492,7 +492,7 @@ if not st.session_state.analysis_result and not st.session_state.analysis_runnin
 st.markdown("---")
 st.markdown("""
 <div class="footer">
-    <p>Stratego 弈策 v0.1.0 · 基于 CrewAI 和《策略博弈》理论框架</p>
+    <p>NeuroSync v0.1.0 · 基于 CrewAI 和《策略博弈》理论框架</p>
     <p style="color:#45475A;font-size:0.75rem;">博弈论不给你答案，它给你思考的框架。</p>
 </div>
 """, unsafe_allow_html=True)
